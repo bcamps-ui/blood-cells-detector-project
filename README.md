@@ -104,11 +104,29 @@ for r in results:
     names = [r.names[c] for c in cls]
 ```
 
-CLI:
-
 ```bash
 yolo predict model=blood_detector_model.pt source=smear.jpg imgsz=640 conf=0.25
 ```
+
+## Streamlit Web App
+
+An interactive web interface is available for easier use.
+
+### Local Run
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Launch the app:
+   ```bash
+   streamlit run app.py
+   ```
+
+### Deployment
+The app is configured for deployment on [Streamlit Community Cloud](https://streamlit.io/cloud). It includes:
+- `requirements.txt`: Python dependencies.
+- `packages.txt`: System dependencies for OpenCV.
+- `.streamlit/config.toml`: Custom theme and configuration.
 
 ## Recommended inference settings
 
